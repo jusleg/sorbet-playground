@@ -2,6 +2,7 @@
 
 require_relative "typechecker"
 
+# define your classes here
 class A
   extend T::Sig
 
@@ -19,6 +20,7 @@ class B < A
   end
 end
 
+# run your code here
 Typechecker.run_checks_on do
   puts A.new.foo
   puts B.new.foo
