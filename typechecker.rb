@@ -8,7 +8,7 @@ require 'open3'
 class Typechecker
   class << self
     def run_checks_on
-      output, status = Open3.capture2e('srb tc')
+      output, status = Open3.capture2e('srb tc --ignore=.bundle/')
       puts lineify(status_text("Static Check", status.success?))
       puts "#{output}\n"
 
